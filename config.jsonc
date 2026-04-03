@@ -1,6 +1,7 @@
 {
-  "layer": "bottom",
-  "position": "bottom",
+  "layer": "top",
+  "position": "top",
+  "height" : 10,
   "font": "Iosevka Nerd Font 10",
   "modules-left": ["hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
@@ -27,6 +28,10 @@
    "network": {
    "format-wifi": " ",
    "format-ethernet": "󰈀 Wired",
+   "interface": "wlp3s0",
+   "format-wifi": "   {bandwidthDownBits}↓  {bandwidthUpBits}↑",
+   "format-ethernet": "󰈀   {bandwidthDownBits}↓ {bandwidthUpBits}↑",
+   "interval" : 1,
    "format-disconnected": "",
    "tooltip": true,
         "states": {
@@ -38,9 +43,9 @@
 
   "pulseaudio": {
     "format": "{icon}",
-    "format-muted": " 󰖁 ",           
+    "format-muted":"󰖁",           
     "format-icons": {             
-    "default": ["", " "],
+    "default":["󰕿", "󰖀", "󰕾"],
   },
     "on-click": "pavucontrol"
 },

@@ -4,14 +4,14 @@
 * {
   font-size: 12px;
   border: none;
-  font-family: "FiraCode Nerd Font";
+  font-family: "FiraCode Nerd Font 10";
   min-height: 0;
 }
 
 
 window#waybar {
   background: rgba(0, 0, 0, 0.0);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* =====================
@@ -22,7 +22,7 @@ window#waybar {
   padding: 4px;
   background: rgba(0, 0, 0, 0.0);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #workspaces button {
@@ -48,7 +48,7 @@ window#waybar {
 #window {
   padding: 0 6px;
   color: #0ddb29;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
 }
 
@@ -71,7 +71,7 @@ window#waybar {
   padding: 0 6px;
   margin: 0;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* Hover effect */
@@ -87,9 +87,13 @@ window#waybar {
    Network
    ===================== */
 
+#network {
+   font-size: 10px;
+}
+
 /* Strong signal */
 #network.good {
-    color: #0b9600;   /* green */
+    color: #0ddb29;   /* green */
 }
 
 /* Medium signal */
@@ -118,13 +122,13 @@ window#waybar {
 #pulseaudio {
   color: #0ddb29;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #pulseaudio.muted {
   color: #db0d0d;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* =====================
@@ -133,37 +137,25 @@ window#waybar {
 #custom-power {
   color: #eff705;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 #battery {
     background-color: transparent;
     color: #ebdbb2;
     border-radius: 6px;
-    font-size: 14px;
-}
-
-#battery.charging {
-    color: #b8bb26;
-}
-
-#battery.warning {
-    color: #fabd2f;
-}
-
-#battery.critical {
-    color: #fb4934;
+    font-size: 13px;
 }
 
 /* =====================
    System tray
    ===================== */
 #tray {
-  padding: 0 6px;
+  padding: 0 1px;
 }
 
 #tray > .passive {
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 #tray > .needs-attention {

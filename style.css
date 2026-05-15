@@ -2,16 +2,17 @@
    Global
    ===================== */
 * {
-  font-size: 12px;
+  font-size: 11px;
   border: none;
-  font-family: "FiraCode Nerd Font 10";
+  padding:0 2px;
+  font-family: "FiraCode Nerd Font";
   min-height: 0;
 }
 
 
 window#waybar {
   background: rgba(0, 0, 0, 0.0);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* =====================
@@ -19,14 +20,12 @@ window#waybar {
    ===================== */
 
 #workspaces {
-  padding: 4px;
   background: rgba(0, 0, 0, 0.0);
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #workspaces button {
-  padding: 0px 4px;
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.0);
   color: #cdd6f4;
@@ -46,9 +45,8 @@ window#waybar {
    Window title
    ===================== */
 #window {
-  padding: 0 6px;
   color: #0ddb29;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -59,19 +57,14 @@ window#waybar {
 #pulseaudio,
 #battery,
 #tray,
-#custom-power
 #clock {
-  padding: 0 6px;
-  margin: 0;
   font-weight: bold;
 }
 
 #clock {
-  color: #e3dc05;
-  padding: 0 6px;
-  margin: 0;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 9.5px;
+  color: #0ce305;
 }
 
 /* Hover effect */
@@ -86,29 +79,9 @@ window#waybar {
 /* =====================
    Network
    ===================== */
-
-#network {
-   font-size: 10px;
-}
-
-/* Strong signal */
-#network.good {
-    color: #0ddb29;   /* green */
-}
-
-/* Medium signal */
-#network.warning {
-    color: #d6be04;   /* yellow */
-}
-
-/* Weak signal */
-#network.critical {
-    color: #e30505;   /* red */
-}
-
-/* Ethernet */
-#network.ethernet {
-    color: #0246b5;   /* blue */
+#network{
+font-size: 9px;
+color: #0ddb29;
 }
 
 #network.disconnected {
@@ -122,40 +95,41 @@ window#waybar {
 #pulseaudio {
   color: #0ddb29;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 9px;
 }
 
 #pulseaudio.muted {
-  color: #db0d0d;
+  color: #ed1f07;
   font-weight: bold;
-  font-size: 14px;
-}
-
-/* =====================
-   Custom buttons
-   ===================== */
-#custom-power {
-  color: #eff705;
-  font-weight: bold;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 #battery {
     background-color: transparent;
-    color: #ebdbb2;
-    border-radius: 6px;
-    font-size: 13px;
+    font-size: 9px;
+}
+
+#battery.charging {
+    color: #b8bb26;
+}
+
+#battery:not(.charging) {
+  color: #ed1f07;
+}
+
+#battery.full{
+  color: #0ddb29;
 }
 
 /* =====================
    System tray
    ===================== */
 #tray {
-  padding: 0 1px;
+  
 }
 
 #tray > .passive {
-  opacity: 0.2;
+  opacity: 0.6;
 }
 
 #tray > .needs-attention {

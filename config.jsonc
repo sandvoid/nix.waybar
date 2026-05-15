@@ -1,7 +1,6 @@
 {
   "layer": "top",
   "position": "top",
-  "height" : 10,
   "font": "Iosevka Nerd Font 10",
   "modules-left": ["hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
@@ -9,56 +8,36 @@
     "network",
     "pulseaudio",
     "battery",
-    "custom/power",
     "clock",
     "tray"                                        
   ],
 
 "hyprland/workspaces": {
-  "format": "{icon}"
-},
-
-  "custom/power": {
-  "format": "  ",
-  "tooltip": "󰌾 Lock 󰤄 Sleep 󰗼 Logout 󰜉 Reboot 󰐥 Shutdown", 
-  "on-click": "/home/sandesh/.config/waybar/scripts/power-menu.sh",
-  "interval": 0
+  "format":"{icon}"
 },
 
    "network": {
-   "format-wifi": " ",
-   "format-ethernet": "󰈀 Wired",
-   "interface": "wlp3s0",
-   "format-wifi": "   {bandwidthDownBits}↓  {bandwidthUpBits}↑",
-   "format-ethernet": "󰈀   {bandwidthDownBits}↓ {bandwidthUpBits}↑",
-   "interval" : 1,
+   "format-wifi":"WIFI {signalStrength}% |",
+   "format-ethernet":"Wired",
+   "interface":"wlp3s0",
    "format-disconnected": "",
    "tooltip": true,
-        "states": {
-        "good": 80,
-        "warning": 40,
-        "critical": 20
-    },
+   "interval": 10
 },
 
   "pulseaudio": {
-    "format": "{icon}",
-    "format-muted":"󰖁",           
-    "format-icons": {             
-    "default":["󰕿", "󰖀", "󰕾"],
-  },
+    "format": "VOL {volume}% |",
+    "format-muted": "MUTED |",  
     "on-click": "pavucontrol"
 },
 
 
   "battery": {
-    "format": "{icon}",
-    "tooltip": true,
-    "format-charging": " ",
-    "format-icons":  [" ", " ", " ", " ", " "]
+     "format": "BAT {capacity}% |",
+     "format-charging": "CHG {capacity}% |",
 },
    
  "clock": {
-  "format": "{:%H:%M}"
+  "format":"{:%H:%M}"
   }
 }

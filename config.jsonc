@@ -13,7 +13,8 @@
   ],
 
 "hyprland/workspaces": {
-  "format":"{icon}"
+  "format":"{icon}",
+  "disable-scroll": true
 },
 
    "network": {

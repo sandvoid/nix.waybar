@@ -22,7 +22,7 @@
    "format-ethernet":"Wired",
    "interface":"wlp3s0",
    "format-disconnected": "",
-   "tooltip": true,
+   "tooltip-format": "{essid}",
    "interval": 10
 },
 
@@ -39,6 +39,8 @@
 },
    
  "clock": {
-  "format":"{:%H:%M}"
+  "format":"{:%H:%M}",
+  "tooltip-format" :"{:%A, %d %B %Y - %H:%M:%S}",
+  "interval": 10
  }
 }
